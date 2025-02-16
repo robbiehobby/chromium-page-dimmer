@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "manifest_version": 3,
+  "name": "__MSG_17AAD1CAF0F1__",
+  "description": "__MSG_FEB7AFE4BDB8__",
+  "action": {
+    "default_popup": "public/page/index.html",
+    "default_icon": {
+      "16": "public/assets/inactive16.png",
+      "32": "public/assets/inactive32.png",
+      "48": "public/assets/inactive48.png",
+      "128": "public/assets/inactive128.png"
+    }
+  },
+  "background": {
+    "service_worker": "public/js/background.js"
+  },
+  "commands": {
+    "toggle-dimmer": {
+      "description": "__MSG_8F71C36814D1__"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "public/js/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "default_locale": "en",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "public/assets/icon16.png",
+    "32": "public/assets/icon32.png",
+    "48": "public/assets/icon48.png",
+    "128": "public/assets/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "version": "1.0"
+}
