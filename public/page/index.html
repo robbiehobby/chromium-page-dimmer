@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-base-100 w-96">
+<head>
+  <title>Page Dimmer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="hidden">
+  <div id="alert" class="flex items-center text-sm py-12 px-5">
+    <div class="grow text-center">
+      <svg viewBox="0 0 24 24" class="lucide lucide-lg text-error mx-auto mb-5"><use href="#icon-disabled" /></svg>
+      <p data-text="AA24C02867B0"></p>
+    </div>
+  </div>
+
+  <form id="form" class="w-full">
+    <label class="label py-3.5">
+      <span id="enabledLabel" class="pe-3" data-text="2BE81B5A153F"></span>
+      <span class="swap swap-rotate">
+        <input type="checkbox" name="enabled" />
+        <svg viewBox="0 0 24 24" class="swap-on lucide h-6 w-6 stroke-secondary stroke-2"><use href="#icon-moon" /></svg>
+        <svg viewBox="0 0 24 24" class="swap-off lucide h-6 w-6 stroke-primary stroke-2"><use href="#icon-sun" /></svg>
+      </span>
+    </label>
+
+    <label class="label">
+      <span data-text="FE3A8E83CBA3"></span>
+      <input type="checkbox" name="global" class="toggle" checked />
+    </label>
+
+    <div class="range-group">
+      <label class="range-control">
+        <span class="range-label">
+          <span data-text="2BB7B6641B63"></span>
+          <span class="range-indicator" data-text="6AAC4C79C0E0"></span>
+        </span>
+        <input type="range" name="brightness" min="0" max="1" step="0.025" value="0.5" data-settings class="range mb-3" />
+      </label>
+
+      <label class="range-control">
+        <span class="range-label">
+          <span data-text="571F8C89DA81"></span>
+          <span class="range-indicator" data-text="6AAC4C79C0E0"></span>
+        </span>
+        <input type="range" name="contrast" min="0" max="1" step="0.025" value="1" data-settings class="range mb-3" />
+      </label>
+
+      <label class="range-control">
+        <span class="range-label">
+          <span data-text="E2B910FC5B59"></span>
+          <span class="range-indicator" data-text="6AAC4C79C0E0"></span>
+        </span>
+        <input type="range" name="sepia" min="0" max="1" step="0.025" value="0" data-settings class="range mb-3" />
+      </label>
+
+      <label class="range-control">
+        <span class="range-label">
+          <span data-text="505BD2B83BB5"></span>
+          <span class="range-indicator" data-text="6AAC4C79C0E0"></span>
+        </span>
+        <input type="range" name="grayscale" min="0" max="1" step="0.025" value="0" data-settings class="range" />
+      </label>
+    </div>
+
+    <details class="collapse outline-none">
+      <summary class="collapse-title" data-text="A600CE181C51"></summary>
+      <div class="collapse-content">
+        <div class="label">
+          <span data-text="599DE1C1296A"></span>
+          <button type="button" id="shortcut" class="btn btn-secondary" data-text="C8BCFC736FF8"></button>
+        </div>
+
+        <div class="label">
+          <span data-text="8031EA1182E7"></span>
+          <button type="button" id="resetTab" class="btn btn-error" data-text="B6588E629DCB"></button>
+        </div>
+
+        <div class="label border-b-0">
+          <span data-text="5632B27119C8"></span>
+          <button type="button" id="resetAll" class="btn btn-error" data-text="B6588E629DCB"></button>
+        </div>
+      </div>
+    </details>
+  </form>
+
+  <script type="module" src="i18n.js"></script>
+  <script type="module" src="main.js"></script>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="icon-disabled" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="m4.9 4.9 14.2 14.2"/>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2"/>
+      <path d="M12 20v2"/>
+      <path d="m4.93 4.93 1.41 1.41"/>
+      <path d="m17.66 17.66 1.41 1.41"/>
+      <path d="M2 12h2"/>
+      <path d="M20 12h2"/>
+      <path d="m6.34 17.66-1.41 1.41"/>
+      <path d="m19.07 4.93-1.41 1.41"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </symbol>
+  </svg>
+</body>
+</html>

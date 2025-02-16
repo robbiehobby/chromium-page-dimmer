@@ -1,0 +1,1 @@
+"use strict";document.querySelectorAll("[data-text], [aria-label]").forEach(a=>{let t=a.dataset.text||null;if(t||(t=a.ariaLabel),!t)return;let e=chrome.i18n.getMessage(String(t));a.dataset.text?(a.innerText=e,delete a.dataset.text):a.ariaLabel=e});
